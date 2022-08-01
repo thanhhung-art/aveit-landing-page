@@ -1,0 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+@import 'variables', 'navbar', 'header', 'block1', 'block2', 'block3', 'block4', 'block5', 'block6', 'block7', 'footer' , 'utils', 'mixins', 'animations';

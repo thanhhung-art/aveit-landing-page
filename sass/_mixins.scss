@@ -1,0 +1,5 @@
+@mixin iconColor($color, $name) {
+  .fa-#{$name} {
+    color: $color;
+  }
+}

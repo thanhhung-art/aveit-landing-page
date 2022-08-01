@@ -1,0 +1,125 @@
+.block6 {
+  padding-bottom: 8rem;
+
+  .header {
+    position: relative;
+    padding-bottom: 2rem;
+
+    h4 {
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  .body {
+    padding: 4rem 8rem 0;
+
+    .container {
+      .reviews {
+        &__container {
+          max-width: 800px;
+          margin: auto;
+        }
+
+        .header {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          h4 {
+            color: $gray;
+          }
+
+          i {
+            color: $yellow;
+          }
+        }
+
+        hr {
+          margin: 2rem 0;
+        }
+
+        .content {
+          p {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            font-weight: 300;
+            font-style: italic;
+            color: $text;
+            text-align: center;
+          }
+        }
+
+        .infomation {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .wrap-image {
+            border-radius: 50%;
+            position: relative;
+
+            img {
+              width: 120px;
+              height: auto;
+              border-radius: 50%;
+            }
+
+            i {
+              position: absolute;
+              top: 0;
+              right: 0;
+              background-color: $primary;
+              color: $white;
+              border-radius: 50%;
+              padding: .8rem;
+              font-size: 1.2rem;
+            }
+          }
+
+          .name {
+            margin-top: 1rem;
+            color: $text-primary;
+          }
+
+          .role {
+            margin-top: .6rem;
+            color: $text;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .block6 {
+    overflow: hidden;
+    padding-bottom: 4rem;
+    .container {
+
+      .body {
+        padding: 2rem 1rem 0;
+
+        .container {
+          .reviews {
+            &__container {
+              margin: auto;
+              min-width: 100%;
+              width: 100%;
+            }
+            .content {
+              p {
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

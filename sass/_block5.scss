@@ -1,0 +1,120 @@
+.block5 {
+  background: url(../assets/images/20.png) left no-repeat;
+  padding-bottom: 8rem;
+
+  .header {
+    padding-bottom: 2rem;
+    position: relative;
+
+    h4 {
+      margin-bottom: 1.5rem;
+    }
+
+    .wrap-title {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      
+      h2 {
+        max-width: 600px;
+        text-align: center;
+      }
+    }
+  }
+
+  .body {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+
+    .card-payment {
+      padding: 3rem;
+      border-radius: 10px;
+      border: 1px solid #dadada;
+      z-index: 1;
+      background-color: $light;
+
+      h4 {
+        font-size: 1rem;
+        color: $gray-dark;
+      }
+
+      h2 {
+        margin: 1.5rem 0;
+        color: $text-primary;
+        font-size: 2rem;
+
+        span {
+          font-size: 1rem;
+        }
+      }
+
+      ul {
+        margin: 2rem 1rem;
+
+        li {
+          margin: .8rem;
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+
+          p {
+            color: $text;
+            font-size: .9rem;
+            
+            flex: 1;
+          }
+        }
+
+        li:first-child {
+          margin-top: 0;
+        }
+        li:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      button {
+        background-color: $light;
+        color: $text-primary;
+        border: 1px solid $gray;
+        padding: .8rem 1.8rem;
+      }
+      button:hover {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+    .card-payment:hover {
+      border-top: 3px solid $primary;
+      box-shadow: 0 10px 30px 0 rgb(44 130 237 / 40%);
+    }
+    .card-payment:nth-child(2) {
+      box-shadow: 0 10px 30px 0 rgb(44 130 237 / 40%);
+      border-top: 3px solid $primary;
+    }
+  }
+
+}
+
+@media screen and (max-width: 820px) {
+  .block5 {
+    .body {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .block5 {
+    padding-bottom: 4rem;
+    .header {
+      padding-bottom: 1rem;
+    }
+    .body {
+      flex-direction: column;
+      margin-top: 2rem;
+      gap: 2rem;
+    }
+  }
+}

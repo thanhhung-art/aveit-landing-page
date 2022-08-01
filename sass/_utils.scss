@@ -1,0 +1,190 @@
+@import 'mixins';
+
+.container-xl {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.p-lg {
+  padding: 8rem 0;
+}
+
+.text-lg {
+  color: $text-primary;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.text-md {
+  font-size: .9rem;
+  color: $text;
+}
+
+.btn-lg {
+  padding: 1.3rem 2.5rem;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  background-color: $primary;
+  color: $white;
+  cursor: pointer;
+  font-size: .9rem;
+}
+
+.text-primary {
+  color: $h1-color;
+  font-size: 2.6rem;
+  font-weight: 500;
+  max-width: 500px;
+}
+
+.header-h4 {
+  color: $secondary;
+  text-align: center;
+}
+
+.hide-p {
+  color: transparent;
+  transition: color .5s ease;
+}
+
+.rotate-directional {
+  transform: rotate(90deg);
+}
+
+.height-0 {
+  height: 0;
+  max-height: 0;
+  transition: height .5s ease;
+  overflow: hidden;
+}
+
+.hide-menu {
+  transform: translateY(-500px);
+  height: 0;
+}
+
+.open-body {
+  animation: open-body .5s ease;
+}
+
+.underscore::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 20px;
+  background-color: $primary;
+  bottom: 0;
+  right: 51%;
+  transform: translateX(-51%);
+}
+
+.underscore::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 70px;
+  background-color: $primary;
+  bottom: 0;
+  right: 43%;
+  transform: translateX(-43%);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.true, .false {
+  border-radius: 50%;
+  color: $white;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .7rem;
+}
+
+.true {
+  background-color: rgb(83, 190, 83);
+}
+
+.false {
+  background-color: rgb(207, 107, 107);
+}
+
+.openMenuButton {
+  width: 17px;
+  height: 17px;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  div {
+    width: 100%;
+    min-height: 3px;
+    background-color: #333;
+  }
+}
+
+.hideMenuButton {
+  div:first-child {
+    transform: rotate(45deg) translate(3px, 7px);
+  }
+
+  div:nth-child(2) {
+    visibility: hidden;
+  }
+
+  div:last-child {
+    transform: rotate(-45deg) translate(3px, -7px);
+  }
+}
+
+@media screen and (max-width: 1230px) {
+  .container {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .container {
+    padding: 0 3rem
+}
+
+  .openMenuButton {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .text-primary {
+    font-size: 2.2rem;
+  }
+
+  .p-lg {
+    padding: 4rem 0;
+  }
+
+  .openMenuButton {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
+
+@include iconColor($angular, 'angular');
+@include iconColor($blackberry, 'blackberry');
+@include iconColor($amazonpay, 'amazonpay');
+@include iconColor($codepen, 'codepen');
+@include iconColor($digitalocean, 'digitalocean');
+@include iconColor($reddit, 'reddit');
+@include iconColor($dropbox, 'dropbox');
